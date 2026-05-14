@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Commander</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container my-5">
+  <div class="card shadow p-4">
+    <h3>Passer une commande</h3>
+
+    <form id="orderForm">
+      <input id="nom" class="form-control my-2" placeholder="Nom complet" required>
+      <input id="telephone" class="form-control my-2" placeholder="Téléphone" required>
+      <input id="adresse" class="form-control my-2" placeholder="Adresse précise" required>
+
+      <select id="produit" class="form-select my-2" onchange="updatePrice()">
+        <option value="25">Lampe solaire USB - $25</option>
+        <option value="30">Blender portable USB - $30</option>
+        <option value="20">Ceinture Fitness - $20</option>
+      </select>
+
+      <input type="number" id="quantite" value="1" min="1" class="form-control my-2" onchange="updatePrice()">
+
+      <div class="alert alert-info">
+        Total: $<span id="total">25</span> — Paiement à la livraison
+      </div>
+
+      <button class="btn btn-primary w-100">Envoyer sur WhatsApp</button>
+    </form>
+  </div>
+</div>
+
+<script>
+function updatePrice(){
+  var p=document.getElementById("produit").value;
+  var q=document.getElementById("quantite").value;
+  document.getElementById("total").innerText=p*q;
+}
+document.getElementById("orderForm").addEventListener("submit",function(e){
+e.preventDefault();
+var n=nom.value,t=telephone.value,a=adresse.value;
+var prod=produit.options[produit.selectedIndex].text;
+var q=quantite.value,tot=produit.value*q;
+
+var msg=`Nouvelle commande AyitiShop:%0A
+Nom: ${n}%0ATéléphone: ${t}%0AAdresse: ${a}%0AProduit: ${prod}%0AQuantité: ${q}%0ATotal: $${tot}%0APaiement: Livraison`;
+
+window.open("https://wa.me/509XXXXXXXX?text="+msg,"_blank");
+});
+</script>
+</body>
+</html>

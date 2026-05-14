@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>AyitiShop - Accueil</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-white shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-primary" href="#">AyitiShop</a>
+    <div>
+      <a class="nav-link d-inline" href="index.html">Accueil</a>
+      <a class="nav-link d-inline" href="commander.html">Commander</a>
+      <a class="nav-link d-inline" href="suivi.html">Suivi</a>
+      <a class="nav-link d-inline" href="comment.html">Comment ça marche</a>
+      <a class="nav-link d-inline" href="assistance.html">Assistance</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Produits utiles livrés partout en Haïti</h1>
+  <p>Paiement à la livraison • Service rapide • WhatsApp direct</p>
+  <a href="commander.html" class="btn btn-light mt-3">Commander maintenant</a>
+</section>
+
+<!-- Confiance -->
+<div class="container reveal">
+  <h2 class="section-title">Pourquoi nous choisir ?</h2>
+  <div class="row text-center g-4">
+    <div class="col-md-4">
+      <div class="card p-4">
+        <h5>🚚 Livraison rapide</h5>
+        <p>24–48h partout en Haïti</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-4">
+        <h5>💵 Paiement à la réception</h5>
+        <p>Pas d’arnaque, vous payez après</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card p-4">
+        <h5>📞 Support WhatsApp</h5>
+        <p>Réponse rapide et directe</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Produits -->
+<div class="container reveal">
+  <h2 class="section-title">Produits populaires</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>Lampe solaire</h5>
+          <p>1500 HTG</p>
+          <a href="commander.html" class="btn btn-primary">Commander</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1606813909355-02f9a6c8a6a1" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>Mixeur portable</h5>
+          <p>2500 HTG</p>
+          <a href="commander.html" class="btn btn-primary">Commander</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1598514982901-3f5eac42928f" class="card-img-top">
+        <div class="card-body text-center">
+          <h5>Power Bank solaire</h5>
+          <p>2000 HTG</p>
+          <a href="commander.html" class="btn btn-primary">Commander</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Avis -->
+<div class="container reveal">
+  <h2 class="section-title">Avis clients</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="testimonial">
+        ⭐⭐⭐⭐⭐<br>“Livraison rapide à Jacmel !”
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="testimonial">
+        ⭐⭐⭐⭐⭐<br>“Produit de qualité, merci AyitiShop”
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="testimonial">
+        ⭐⭐⭐⭐⭐<br>“Service WhatsApp très pratique”
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">© 2026 AyitiShop — Fiable & Rapide</div>
+
+<a class="whatsapp-float" href="https://wa.me/509XXXXXXXX">💬</a>
+
+<script>
+function revealOnScroll(){
+  var reveals=document.querySelectorAll(".reveal");
+  for(var i=0;i<reveals.length;i++){
+    var windowHeight=window.innerHeight;
+    var elementTop=reveals[i].getBoundingClientRect().top;
+    if(elementTop < windowHeight - 100){
+      reveals[i].classList.add("active");
+    }
+  }
+}
+window.addEventListener("scroll", revealOnScroll);
+</script>
+
+</body>
+</html>
